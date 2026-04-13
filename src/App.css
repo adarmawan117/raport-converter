@@ -52,46 +52,7 @@
   padding: 2px 8px;
   border-radius: 99px;
 }
-.navbar-tabs {
-  display: flex;
-  gap: 4px;
-  background: rgba(10,14,26,0.6);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 3px;
-}
-.navbar-tab {
-  padding: 7px 18px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: var(--transition);
-  border: none;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-.navbar-tab:hover {
-  color: var(--text-primary);
-  background: rgba(255,255,255,0.05);
-}
-.navbar-tab.active {
-  color: var(--text-primary);
-  background: var(--bg-card);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-}
-.navbar-tab.tab-nilai.active { color: var(--accent-blue-light); }
-.navbar-tab.tab-rata.active { color: var(--accent-purple); }
-.tab-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: currentColor;
-}
+
 
 /* ── Main Content ── */
 .main-content {
@@ -602,51 +563,7 @@
 }
 .step-connector.done { background: rgba(34,197,94,0.4); }
 
-/* ── Spinner Config ── */
-.spinner-config {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  background: rgba(139,92,246,0.06);
-  border: 1px solid rgba(139,92,246,0.2);
-  border-radius: var(--radius-sm);
-}
-.spinner-config label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  flex: 1;
-}
-.spinner-input {
-  width: 80px;
-  background: var(--bg-input);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 7px 10px;
-  font-size: 0.88rem;
-  color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  outline: none;
-  text-align: center;
-}
-.spinner-input:focus { border-color: var(--accent-purple); }
-.spinner-btn {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-input);
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: var(--transition);
-  font-family: monospace;
-}
-.spinner-btn:hover { border-color: var(--accent-purple); color: var(--accent-purple); }
+
 
 /* ── Divider ── */
 .divider {
@@ -677,7 +594,6 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .navbar { padding: 0 16px; }
-  .navbar-tabs { display: none; }
   .main-content { padding: 16px; }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }

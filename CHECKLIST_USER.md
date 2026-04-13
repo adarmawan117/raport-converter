@@ -10,8 +10,8 @@
 | # | Item | Status |
 |---|------|--------|
 | N-01 | Navbar tampil dengan branding `Converter Nilai Raport` dan badge `V2.0 Web` | ✅ OK |
-| N-02 | Dua tab tersedia: **📊 Menu Nilai** dan **📈 Menu Rata-Rata** | ✅ OK |
-| N-03 | Klik antar tab berpindah halaman tanpa error | ✅ OK |
+| N-02 | (Dihapus) | - |
+| N-03 | (Dihapus) | - |
 | N-04 | **Step Indicator** (lingkaran langkah 1-2-3) terlihat dan berubah sesuai progress | ✅ OK |
 | N-05 | Footer muncul di bagian bawah dengan teks `Team ADR Programming` | ✅ OK |
 
@@ -64,42 +64,7 @@
 
 ---
 
-## 📈 Menu Rata-Rata
 
-### 🔷 Template Download
-
-| # | Item | Status |
-|---|------|--------|
-| B-01 | Klik tombol **"⬇️ Download Template"** di tab Rata-Rata → file `template_rata_rata.xlsx` terunduh | ⬜ Belum |
-| B-02 | Buka template, format kolom benar: `Nama Siswa \| Rata-Rata 1 \| Rata-Rata 2 \| ... \| Rata-Rata N` | ⬜ Belum |
-
-### 🔷 Upload File & Konfigurasi
-
-| # | Item | Status |
-|---|------|--------|
-| B-03 | Upload template rata-rata → file diterima, preview tabel muncul | ⬜ Belum |
-| B-04 | Spinner **"Banyak rata-rata per siswa"** otomatis terisi sesuai jumlah kolom di file | ⬜ Belum |
-| B-05 | Tombol **`+`** dan **`−`** di spinner mengubah nilai qty | ⬜ Belum |
-| B-06 | Input manual angka di spinner berfungsi | ⬜ Belum |
-| B-07 | Nilai qty minimal 1 dan maksimal 100 (tidak bisa melewati batas) | ⬜ Belum |
-
-### 🔷 Proses & Output
-
-| # | Item | Status |
-|---|------|--------|
-| B-08 | Klik **"⚡ Proses & Generate Output"** → tabel output muncul | ⬜ Belum |
-| B-09 | Format output sama seperti Menu Nilai: nama di baris pertama, rata-rata di bawahnya (kolom nama kosong) | ⬜ Belum |
-| B-10 | Jumlah rata-rata per siswa sesuai dengan nilai `qty` yang dipilih | ⬜ Belum |
-
-### 🔷 Download Hasil
-
-| # | Item | Status |
-|---|------|--------|
-| B-11 | Klik **"⬇️ Download CSV"** → file `hasil_rata_rata.csv` terunduh | ⬜ Belum |
-| B-12 | Klik **"📊 Download Excel"** → file `hasil_rata_rata.xlsx` terunduh | ⬜ Belum |
-| B-13 | Kedua file berisi data yang benar sesuai format output yang diharapkan | ⬜ Belum |
-
----
 
 ## 🔔 Notifikasi Toast
 
@@ -118,8 +83,7 @@
 | ID | Kategori | Deskripsi Singkat | Status |
 |----|----------|-------------------|--------|
 | N-01 | Tampilan | Navbar & branding | ✅ OK |
-| N-02 | Tampilan | Dua tab navigasi tersedia | ✅ OK |
-| N-03 | Tampilan | Perpindahan tab tanpa error | ✅ OK |
+
 | N-04 | Tampilan | Step Indicator berfungsi | ✅ OK |
 | N-05 | Tampilan | Footer tampil | ✅ OK |
 | A-01 | Nilai | Download template Excel (.xlsx) | ✅ OK |
@@ -128,11 +92,7 @@
 | A-14 | Nilai | Download CSV hasil | ✅ OK |
 | A-16 | Nilai | Download Excel hasil | ✅ OK |
 | A-18 | Nilai | Tombol disabled jika belum upload | ✅ OK |
-| B-01 | Rata-Rata | Download template Excel (.xlsx) | ⬜ Belum |
-| B-03 | Rata-Rata | Upload & preview | ⬜ Belum |
-| B-04 | Rata-Rata | Spinner qty otomatis | ⬜ Belum |
-| B-08 | Rata-Rata | Proses & output benar | ⬜ Belum |
-| B-11 | Rata-Rata | Download CSV & Excel hasil | ⬜ Belum |
+
 | C-01 | Toast | Notifikasi muncul & hilang otomatis | ✅ OK |
 
 > **Keterangan status:** ⬜ Belum &nbsp;|&nbsp; ✅ OK &nbsp;|&nbsp; ❌ Bug/Error &nbsp;|&nbsp; ⚠️ Perlu Perbaikan Minor

@@ -62,38 +62,7 @@ export function processNilai(rows) {
   return output;
 }
 
-/**
- * Process RATA-RATA data
- * Input rows: [name, rata1, rata2, ..., rataN]  (same as nilai)
- * Spinner qty controls how many rata-rata per student
- * Output format is same as processNilai but columns are: Nama, Nilai
- * Following Java logic: name\trata1\trata2\t...\trataN  (all on one row per student)
- * 
- * Actually output same transpose style:
- * Name, rata1
- * '', rata2
- * ...
- * '', rataN
- */
-export function processRataRata(rows, qty) {
-  // If rows already have name + values, process directly
-  const output = [['Nama', 'Nilai Rata-Rata']];
-  for (const row of rows) {
-    if (!row || row.length < 2) continue;
-    const name = String(row[0]).trim();
-    // Abaikan jika ternyata masih terbaca sebagai header (pengaman ekstra)
-    if (name.toLowerCase() === 'nama siswa' || name.toLowerCase() === 'nama') continue;
 
-    // Take exactly `qty` rata-rata values (trim to qty if more)
-    const values = row.slice(1, qty + 1).map(v => String(v).trim()).filter(v => v !== '');
-    if (!name || values.length === 0) continue;
-
-    values.forEach((val, idx) => {
-      output.push([idx === 0 ? name : '', val]);
-    });
-  }
-  return output;
-}
 
 /**
  * Download output as CSV
@@ -152,17 +121,7 @@ export function downloadNilaiTemplate() {
   downloadExcelTemplate(rows, 'template_nilai.xlsx', 'Template Nilai');
 }
 
-/**
- * Download template as Excel (.xlsx) for RATA-RATA
- * Excel is used so columns are properly separated when opened
- */
-export function downloadRataRataTemplate(qty = 20) {
-  const header = ['Nama Siswa', ...Array.from({ length: qty }, (_, i) => `Rata-Rata ${i + 1}`)];
-  const row1 = ['AHMAD FAUZI', ...Array.from({ length: qty }, () => 80 + Math.floor(Math.random() * 10))];
-  const row2 = ['BUDI SANTOSO', ...Array.from({ length: qty }, () => 75 + Math.floor(Math.random() * 12))];
-  const row3 = ['CITRA DEWI', ...Array.from({ length: qty }, () => 85 + Math.floor(Math.random() * 8))];
-  downloadExcelTemplate([header, row1, row2, row3], 'template_rata_rata.xlsx', 'Template Rata-Rata');
-}
+
 
 /**
  * Internal: download a template as styled Excel file
